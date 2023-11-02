@@ -1,0 +1,41 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");    
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400); 
+
+    function diseniarCircuferencia (x,y,radio){ //Esta funcion cre los circulos
+        pincel.fillStyle = "red";
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI);
+        pincel.fill();
+    }
+
+    function limpiarPantalla (){ //Esta funcion limpia la pantalla
+        pincel.clearRect(0,0,600,400);
+    }
+
+    var x = 0; //Esta variable indica el inicio del eje "X"
+    var sentido = 1;
+
+    function actualizarPantalla (){// Esta funcion crea el movimiento del circulo
+
+        limpiarPantalla();
+        if (x > 600){  //mientras que x sea menor a 600 avanza
+            sentido = -1;
+        }
+        else if (x < 0){
+            sentido = 1;    
+        }
+        diseniarCircuferencia (x,20,15);
+        x = x + sentido;
+       
+    }
+
+    //setInterval es una funcion que reciere de dos variables "X", tiempo en ejecutarse
+    setInterval (actualizarPantalla,100)
+
+
+</script> 

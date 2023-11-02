@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA Calcular la media de edad de la Familia.</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var noFamilia = parseInt (prompt("¿Qué tan grande es tu familia?"));
+    var contador = 1;
+    var totaledad = 0;
+
+    while (contador <= noFamilia) {
+        
+        edad = parseInt ( prompt ( "¿Cual es la edad de tu familiar? "));
+        contador ++ ;
+        totaledad = edad + edad ;
+          
+    }
+
+    media = totaledad / noFamilia ; 
+    
+    imprimir("La edad media es: " + media + ".");
+    
+</script>

@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA para Multiplicar</h1>
+
+<script>
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    
+    var numeroMultiplicar = 1;   
+
+    var contador = 1;
+
+    imprimir ("RUTINA WHILE");
+    while (contador <= 10) {
+        imprimir ( numeroMultiplicar + " X " + contador + " = " + (numeroMultiplicar * contador ) + "." );    
+            contador ++;
+    }
+        
+    imprimir ("FIN WHILE");
+    saltarLinea ();
+    imprimir ("RUTINA FOR");
+
+    for (var noamultiplicar = 1; noamultiplicar <= 10 ; noamultiplicar ++ ){
+
+        imprimir ( 5 + " X " + noamultiplicar + " = " + (noamultiplicar * noamultiplicar ) + "." );
+       
+    }
+    imprimir ("FIN FOR");
+
+
+</script>
